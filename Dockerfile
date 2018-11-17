@@ -38,7 +38,7 @@ WORKDIR /usr/src/app
 # create user account
 RUN adduser --disabled-password --gecos '' theia \
 	&& adduser theia sudo \
-    && adduser theia docker \
+	&& adduser theia docker \
 	&& echo '%sudo ALL=(ALL) NOPASSWD:ALL' >> /etc/sudoers \
 	&& chown theia:theia /usr/src/app
 
